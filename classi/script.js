@@ -1,23 +1,26 @@
+var g ;
 function startGame() {
-    myGameArea.start();
+    g = new GameArea();
+
 }
 
-var myGameArea = {  
-    canvas : undefined,
-    start : function() {
+class GameArea  {  
+   constructor(){
+
+   
         this.canvas = document.getElementById("gameArea");
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         this.interval = setInterval(updateGameArea, 20); //ogni 20 ms chiamo il metodo updateGameArea
-    },
+   }
 
-    draw: function(component) {
+
+    draw (component) {
     this.context.fillStyle = component.color;
     this.context.fillRect(component.x, component.y, component.width, component.height);
   }
 }
-
 class Rectangle { 
     height; 
     width; 
@@ -28,12 +31,13 @@ class Rectangle {
       this.width = width; 
       this.x=x;
       this.y=y; 
+
     } 
   }
   
-  var r = new Rectangle(50,50,);
+  var r = new Rectangle(10,10,50,50);
 
 
 function updateGameArea() {
-  myGameArea.draw(r);
+  g.draw(r);
 }
