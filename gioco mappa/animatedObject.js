@@ -18,6 +18,9 @@ export default class AnimatedObject {
       this.x = x;
       this.y = y;
     }
+    draw(context){
+      context.drawImage(this.image,this.x,this.y,this.width,this.height);
+    }
   
     update(obstacleVector) {
       this.tryY = this.y + this.speedY;
