@@ -9,10 +9,7 @@ export default class GameArea {
   obstaclesVector = new Array();
     constructor() {
       this.ninja = new AnimatedObject(NinjaSprites.running, 60, 60, 10, 120);
-      let bush = new AnimatedObject(ObstacleSprites.bush, 100, 50, 100, 220);
-      let crate = new AnimatedObject(ObstacleSprites.crate, 100, 100, 200, 170);
-      this.obstaclesVector.push(bush);
-      this.obstaclesVector.push(crate);
+     
       
     this.canvas = document.getElementById("gameArea");
     this.canvas.width = 480;

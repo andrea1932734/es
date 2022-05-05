@@ -1,6 +1,6 @@
 export default class AnimatedObject {
-    speedX = 0;
-    speedY = 0;
+  speedX = 0;
+  speedY = 0;
     width = 60;
     height = 60;
     x = 10;
